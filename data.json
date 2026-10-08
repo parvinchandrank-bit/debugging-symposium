@@ -1,0 +1,234 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin",
+      "status": "ACTIVE",
+      "teamName": "ADMIN"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "A list is built as `x = [i*i for i in range(6) if i % 2]`. What is `x`?",
+      "a": "[1, 9, 25]",
+      "b": "[0, 4, 16]",
+      "c": "[1, 4, 9, 16, 25]",
+      "d": "[0, 1, 4, 9, 16, 25]",
+      "answer": "A"
+    },
+    {
+      "id": 2,
+      "text": "What is printed by `a=[1,2,3]; print(a.append(4))`?",
+      "a": "[1,2,3,4]",
+      "b": "4",
+      "c": "None",
+      "d": "Error",
+      "answer": "C"
+    },
+    {
+      "id": 3,
+      "text": "Which output is produced by `print(bool([]), bool([0]), bool(\"False\"))`?",
+      "a": "False False True",
+      "b": "False True True",
+      "c": "True True False",
+      "d": "False True False",
+      "answer": "B"
+    },
+    {
+      "id": 4,
+      "text": "What is the result of `list(dict.fromkeys([3,1,3,2,1]))` in modern Python?",
+      "a": "[3,1,2]",
+      "b": "[1,2,3]",
+      "c": "[3,3,1,1,2]",
+      "d": "Error because dicts are unordered",
+      "answer": "A"
+    },
+    {
+      "id": 5,
+      "text": "A function uses `def f(x=[]): x.append(1); return x`. Calling `f()` twice returns what?",
+      "a": "[1] then [1]",
+      "b": "[1] then [1,1]",
+      "c": "[1,1] then [1,1]",
+      "d": "TypeError",
+      "answer": "B"
+    },
+    {
+      "id": 6,
+      "text": "What is the value of `result`? `result = [x for x in range(10) if x % 2 == 0 and x % 3 == 0]`",
+      "a": "[0,2,4,6,8]",
+      "b": "[3,6,9]",
+      "c": "[0,6]",
+      "d": "[6]",
+      "answer": "C"
+    },
+    {
+      "id": 7,
+      "text": "Which statement about `is` versus `==` is correct?",
+      "a": "Both always compare values",
+      "b": "`is` compares object identity; `==` compares equality",
+      "c": "`is` compares types only",
+      "d": "`==` compares memory addresses",
+      "answer": "B"
+    },
+    {
+      "id": 8,
+      "text": "What does `d.get(\"missing\", 0) + 1` do when `missing` is not in dictionary `d`?",
+      "a": "Raises KeyError",
+      "b": "Returns None",
+      "c": "Returns 1",
+      "d": "Adds the key automatically",
+      "answer": "C"
+    },
+    {
+      "id": 9,
+      "text": "What is printed? `s={1,2,3}; print(2 in s and 4 not in s)`",
+      "a": "True",
+      "b": "False",
+      "c": "2",
+      "d": "Error",
+      "answer": "A"
+    },
+    {
+      "id": 10,
+      "text": "Which expression creates a shallow copy of list `a`?",
+      "a": "b=a",
+      "b": "b=a.copy()",
+      "c": "b=copy(a, deep=True)",
+      "d": "b=&a",
+      "answer": "B"
+    },
+    {
+      "id": 11,
+      "text": "What is the output of `print(\"abc\"[::-1])`?",
+      "a": "abc",
+      "b": "cba",
+      "c": "bac",
+      "d": "Error",
+      "answer": "B"
+    },
+    {
+      "id": 12,
+      "text": "For `nums=[1,2,3]`, what does `nums[1:][::-1]` return?",
+      "a": "[1,2]",
+      "b": "[2,3]",
+      "c": "[3,2]",
+      "d": "[3,2,1]",
+      "answer": "C"
+    },
+    {
+      "id": 13,
+      "text": "What happens when modifying a dictionary while iterating directly over `d`?",
+      "a": "Always safe",
+      "b": "It always sorts the dictionary",
+      "c": "It can raise RuntimeError: dictionary changed size during iteration",
+      "d": "It silently ignores changes",
+      "answer": "C"
+    },
+    {
+      "id": 14,
+      "text": "What does `sum(x for x in range(5) if x>2)` return?",
+      "a": "5",
+      "b": "7",
+      "c": "9",
+      "d": "10",
+      "answer": "B"
+    },
+    {
+      "id": 15,
+      "text": "Which is the safest way to close a file even if an exception occurs?",
+      "a": "f=open(...); f.close() after all code",
+      "b": "with open(...) as f: ...",
+      "c": "del f",
+      "d": "open(..., auto_close=True)",
+      "answer": "B"
+    },
+    {
+      "id": 16,
+      "text": "DEBUG 1 \u2014 Fix the function so it correctly finds the maximum even when all numbers are negative. Edit the code and submit the corrected version.",
+      "code": "def find_max(nums):\n    max_value = nums[0]\n    for n in nums:\n        if n > max_value:\n            max_value = n\n    return max_value\n\nvalues = [-3, -7, -2, -9, -4]\nprint(find_max(values))",
+      "keywords": [
+        "max_value = nums[0]"
+      ],
+      "answer": "CODE"
+    },
+    {
+      "id": 17,
+      "text": "DEBUG 2 \u2014 Fix the vowel counter so uppercase vowels are counted too. Edit the code and submit the corrected version.",
+      "code": "def count_vowels(text):\n    vowels = \"aeiouAEIOU\"\n    count = 0\n    for ch in text:\n        if ch in vowels:\n            count += 1\n    return count\n\ntext = input(\"Enter text: \")\nprint(\"Vowels:\", count_vowels(text))",
+      "keywords": [
+        "AEIOU"
+      ],
+      "answer": "CODE"
+    },
+    {
+      "id": 18,
+      "text": "DEBUG 3 \u2014 HARD: Fix the normalization/aggregation bug so names differing only by case or extra spaces are grouped correctly. Submit the corrected code.",
+      "code": "# DEBUG 3 \u2014 The grouping is case/whitespace sensitive. Fix the normalization so Alice and alice are treated as the same person.\nfrom collections import defaultdict\nimport re\n\ndef process(records):\n    totals = defaultdict(int)\n    counts = defaultdict(int)\n    cleaned = []\n    for row in records:\n        name = row.get(\"name\", \"\").strip()\n        value = row.get(\"value\", 0)\n        if not name:\n            continue\n        try:\n            value = int(value)\n        except (TypeError, ValueError):\n            continue\n        name = re.sub(r\"\\s+\", \" \", name).lower()\n        name = name.title()\n        totals[name] += value\n        counts[name] += 1\n    result = []\n    for name, total in totals.items():\n        average = total / counts[name]\n        result.append({\"name\": name, \"total\": total, \"average\": average})\n    result.sort(key=lambda x: (-x[\"total\"], x[\"name\"]))\n    return result\n\nrecords = [\n    {\"name\": \" Alice \", \"value\": \"10\"},\n    {\"name\": \"Alice\", \"value\": \"20\"},\n    {\"name\": \"Bob\", \"value\": \"5\"},\n    {\"name\": \"\", \"value\": \"99\"},\n    {\"name\": \"Bob\", \"value\": \"15\"},\n    {\"name\": \"Cara\", \"value\": \"bad\"},\n    {\"name\": \"Cara\", \"value\": \"40\"},\n]\n\nfor item in process(records):\n    print(f\"{item['name']}: {item['total']} / {item['average']:.2f}\")",
+      "keywords": [
+        "name = name.title()"
+      ],
+      "answer": "CODE"
+    },
+    {
+      "id": 19,
+      "text": "DEBUG 4 \u2014 VERY HARD: Fix the reporting logic so the average is computed from the valid records belonging to each normalized name. Submit the corrected code.",
+      "code": "# DEBUG 4 \u2014 The report must calculate each name average using only valid numeric records. Correct the aggregation bug without changing the input.\nfrom collections import defaultdict\nimport re\n\ndef process(records):\n    totals = defaultdict(int)\n    counts = defaultdict(int)\n    cleaned = []\n    for row in records:\n        name = row.get(\"name\", \"\").strip()\n        value = row.get(\"value\", 0)\n        if not name:\n            continue\n        try:\n            value = int(value)\n        except (TypeError, ValueError):\n            continue\n        name = re.sub(r\"\\s+\", \" \", name)\n        cleaned.append((name, value))\n        totals[name] += value\n        counts[name] += 1\n    result = []\n    for name, total in totals.items():\n        average = total / len(cleaned)\n        result.append({\"name\": name, \"total\": total, \"average\": average})\n    result.sort(key=lambda x: (-x[\"total\"], x[\"name\"]))\n    return result\n\nrecords = [\n    {\"name\": \" Alice \", \"value\": \"10\"},\n    {\"name\": \"Alice\", \"value\": \"20\"},\n    {\"name\": \"Bob\", \"value\": \"5\"},\n    {\"name\": \"\", \"value\": \"99\"},\n    {\"name\": \"Bob\", \"value\": \"15\"},\n    {\"name\": \"Cara\", \"value\": \"bad\"},\n    {\"name\": \"Cara\", \"value\": \"40\"},\n]\n\nfor item in process(records):\n    print(f\"{item['name']}: {item['total']} / {item['average']:.2f}\")",
+      "keywords": [
+        "average = total / counts[name]"
+      ],
+      "answer": "CODE"
+    },
+    {
+      "id": 20,
+      "text": "DEBUG 5 \u2014 VERY HARD: Fix all issues needed for valid records, empty names, and deterministic ranking by total descending then name ascending. Submit the corrected code.",
+      "code": "# DEBUG 5 \u2014 Fix the pipeline so invalid records are skipped, names are normalized,\n# totals are accumulated correctly, and the final ranking is deterministic.\nfrom collections import defaultdict\n\ndef build_report(records):\n    totals = defaultdict(float)\n    counts = defaultdict(int)\n    for record in records:\n        name = record.get(\"name\")\n        amount = record.get(\"amount\")\n        if name is None or amount is None:\n            continue\n        name = \" \".join(name.split()).title()\n        if not name:\n            continue\n        try:\n            amount = float(amount)\n        except (TypeError, ValueError):\n            continue\n        if amount < 0:\n            continue\n        totals[name] += amount\n        counts[name] += 1\n    report = []\n    for name in totals:\n        report.append({\n            \"name\": name,\n            \"total\": totals[name],\n            \"average\": totals[name] / counts[name],\n            \"count\": counts[name]\n        })\n    report.sort(key=lambda x: (-x[\"total\"], x[\"name\"]))\n    return report\n\nrecords = [\n    {\"name\":\" alice \",\"amount\":\"100\"},\n    {\"name\":\"Alice\",\"amount\":\"50\"},\n    {\"name\":\"BOB\",\"amount\":\"20\"},\n    {\"name\":\"bob\",\"amount\":\"80\"},\n    {\"name\":\"Cara\",\"amount\":\"bad\"},\n    {\"name\":\"Cara\",\"amount\":\"200\"},\n    {\"name\":\"\",\"amount\":\"40\"},\n    {\"name\":\"Dan\",\"amount\":\"-5\"},\n    {\"name\":\"Eve\",\"amount\":\"300\"},\n]\n\nresult = build_report(records)\nfor row in result:\n    print(row[\"name\"], row[\"total\"], row[\"average\"], row[\"count\"])\n",
+      "keywords": [
+        "if not name:",
+        "report.sort(key=lambda x: (-x[\"total\"], x[\"name\"]))"
+      ],
+      "answer": "CODE"
+    }
+  ],
+  "rounds": {
+    "1": {
+      "status": "WAITING",
+      "duration": 1200,
+      "questions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "2": {
+      "status": "WAITING",
+      "duration": 1200,
+      "questions": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    }
+  },
+  "attempts": [],
+  "selected": [],
+  "nextUser": 2,
+  "nextQuestion": 21,
+  "nextAttempt": 1
+}
